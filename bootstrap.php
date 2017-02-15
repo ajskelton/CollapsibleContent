@@ -22,3 +22,9 @@
  */
 namespace Ajskelton\CollapsibleContent;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit( "Oh, silly, there's nothing to see here." );
+}
+
+include( __DIR__ . '/src/shortcode/shortcodes.php' );
+
