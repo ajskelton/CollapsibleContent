@@ -10,10 +10,6 @@
  */
 namespace Ajskelton\CollapsibleContent\Shortcode;
 
-//[qa question="What question would you like to ask?" show_icon="" hide_icon=""]this is the answer[/qa]
-
-//[teaser visible_message="What question would you like to ask?" show_icon="" hide_icon=""]this is the answer[/qa]
-
 add_shortcode( 'qa', __NAMESPACE__ . '\process_the_shortcode' );
 add_shortcode( 'teaser', __NAMESPACE__ . '\process_the_shortcode' );
 /**
