@@ -66,9 +66,10 @@ function render_single_faq( array $attributes, array $config ) {
 	if ( ! $faq ) {
 		return;
 	}
-
-	$post_title     = $faq->post_title;
-	$hidden_content = do_shortcode( $faq->post_content );
+	$use_term_container = false;
+	$is_calling_source  = 'shortcode-single-faq';
+	$post_title         = $faq->post_title;
+	$hidden_content     = do_shortcode( $faq->post_content );
 
 	include( $config['views']['container_single'] );
 
@@ -85,7 +86,6 @@ function render_single_faq( array $attributes, array $config ) {
  * @return void
  */
 function render_topic_faqs( array $attributes, array $config ) {
-	// WP_Query
 	$config_args = array(
 		//number of records to get back
 		'posts_per_page' => (int) $attributes['number_of_topics'],
@@ -107,6 +107,10 @@ function render_topic_faqs( array $attributes, array $config ) {
 	if ( ! $query->have_posts() ) {
 		return;
 	}
+
+	$use_term_container = true;
+	$is_calling_source  = 'shortcode-by-topic';
+	$term_slub          = $attributes['topic'];
 
 	include( $config['views']['container_topic'] );
 
@@ -146,9 +150,9 @@ function loop_and_render_faqs_by_topic( \WP_Query $query, array $attributes, arr
 function get_shortcode_configuration() {
 	return array(
 		'views'    => array(
-			'container_single' => __DIR__ . '/views/container-single.php',
-			'container_topic'  => __DIR__ . '/views/container-topic.php',
-			'faq'              => __DIR__ . '/views/faq.php',
+			'container_single' => FAQ_MODULE_DIR . '/views/container.php',
+			'container_topic'  => FAQ_MODULE_DIR . '/views/container.php',
+			'faq'              => FAQ_MODULE_DIR . '/views/faq.php',
 		),
 		'defaults' => array(
 			'show_icon'        => 'dashicons dashicons-arrow-down-alt2',

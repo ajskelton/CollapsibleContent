@@ -11,6 +11,7 @@
 namespace Ajskelton\Module\FAQ;
 
 define( 'FAQ_MODULE_TEXT_DOMAIN', COLLAPSIBLE_CONTENT_TEXT_DOMAIN );
+define( 'FAQ_MODULE_DIR', __DIR__ );
 
 /**
  * Autoload plugin files
@@ -27,7 +28,7 @@ function autoload() {
 		'template/helpers.php',
 	);
 
-	foreach( $files as $file ) {
+	foreach ( $files as $file ) {
 		include( __DIR__ . '/' . $file );
 	}
 }
