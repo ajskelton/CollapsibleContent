@@ -12,7 +12,7 @@
  * Plugin Name: Collapsible Content
  * Plugin URI: _
  * Description: Collapsible Content is a WordPress plugin that shows and hides hidden content.
- * Version: 1.0.0
+ * Version: 1.2.0
  * Author: ajskelton
  * Author URI: https://anthonyskelton.com
  * Text Domain: collapsible_content
