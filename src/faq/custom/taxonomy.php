@@ -48,21 +48,6 @@ function get_taxonomy_labels_config( $singular_label, $plural_label, $menu_label
 	}
 
 	return array(
-		'name'                       => _x( $plural_label, 'taxonomy general name', FAQ_MODULE_TEXT_DOMAIN ),
-		'singular_name'              => _x( $singular_label, 'taxonomy singular name', FAQ_MODULE_TEXT_DOMAIN ),
-		'search_items'               => __( 'Search ' . $plural_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'popular_items'              => __( 'Popular ' . $plural_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'all_items'                  => __( 'All ' . $plural_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'parent_item'                => null,
-		'parent_item_colon'          => null,
-		'edit_item'                  => __( 'Edit ' . $singular_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'update_item'                => __( 'Update ' . $singular_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'add_new_item'               => __( 'Add New ' . $singular_label, FAQ_MODULE_TEXT_DOMAIN ),
-		'new_item_name'              => __( "New {$singular_label} Name", FAQ_MODULE_TEXT_DOMAIN ),
-		'separate_items_with_commas' => __( "Separate {$plural_label} with commas", FAQ_MODULE_TEXT_DOMAIN ),
-		'add_or_remove_items'        => __( "Add or remove {$plural_label}", FAQ_MODULE_TEXT_DOMAIN ),
-		'choose_from_most_used'      => __( "Choose from the most used {$plural_label}", FAQ_MODULE_TEXT_DOMAIN ),
-		'not_found'                  => __( "No {$plural_label} found.", FAQ_MODULE_TEXT_DOMAIN ),
-		'menu_name'                  => $menu_label,
+
 	);
 }
