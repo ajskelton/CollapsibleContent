@@ -38,8 +38,11 @@ function enqueue_assets() {
  */
 function autoload() {
 	$files = array(
+		'custom/module.php',
 		'shortcode/shortcodes.php',
 		'faq/module.php',
+		'galleries/module.php',
+		'dinosaurs/module.php'
 	);
 
 	foreach( $files as $file ) {

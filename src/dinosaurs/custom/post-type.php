@@ -2,17 +2,15 @@
 /**
  * Description
  *
- * @package   Ajskelton\Module\FAQ\Custom
+ * @package   Ajskelton\Module\Dinosaurs\Custom
  * @since     1.0.0
  * @author    ajskelton
  * @link      anthonyskelton.com
  * @license   GNU General Public License 2.0+
  */
-namespace Ajskelton\Module\FAQ\Custom;
+namespace Ajskelton\Module\Dinosaurs\Custom;
 
-use Ajskelton\Module\Custom as customModule;
-
-add_filter( 'add_custom_post_type_runtime_config', __NAMESPACE__ . '\register_faq_custom_post_type' );
+add_filter( 'add_custom_post_type_runtime_config', __NAMESPACE__ . '\register_dinosaurs_custom_post_type' );
 /**
  * Register the custom post type
  *
@@ -22,8 +20,8 @@ add_filter( 'add_custom_post_type_runtime_config', __NAMESPACE__ . '\register_fa
  *
  * @return array
  */
-function register_faq_custom_post_type( array $configs ) {
-	$config = include( COLLAPSIBLE_CONTENT_DIR . 'config/faq/post-type.php' );
+function register_dinosaurs_custom_post_type( array $configs ) {
+	$config = include( COLLAPSIBLE_CONTENT_DIR . 'config/dinosaurs/post-type.php' );
 
 	$configs[ $config['post_type'] ] = $config;
 
